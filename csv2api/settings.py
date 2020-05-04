@@ -25,7 +25,7 @@ SECRET_KEY = 'lmxb#7o%gl8go7xnntegu)g-p73k)&@&_kvulg2x)ldfc8-)&f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['csv2api.pythonanywhere.com']
+ALLOWED_HOSTS = ['csv2api.pythonanywhere.com' , 'localhost']
 
 
 # Application definition
@@ -120,10 +120,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = '/'
+
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
-print(STATIC_ROOT)
+# print(STATIC_ROOT)
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
