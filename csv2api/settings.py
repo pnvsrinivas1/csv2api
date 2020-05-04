@@ -25,7 +25,7 @@ SECRET_KEY = 'lmxb#7o%gl8go7xnntegu)g-p73k)&@&_kvulg2x)ldfc8-)&f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['csv2api.pythonanywhere.com']
 
 
 # Application definition
