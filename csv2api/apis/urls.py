@@ -1,6 +1,7 @@
 from django.urls import include
 from django.conf.urls import url
 from rest_framework import routers
+from rest_framework.documentation import include_docs_urls
 
 from csv2api.apis.users.views import UserViewSet
 
@@ -12,5 +13,6 @@ router.register(r'users', UserViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     url(r'^', include(router.urls), name='api_index'),
-    url(r'^auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^docs/', include_docs_urls(title='csv2api', public=True)),
 ]

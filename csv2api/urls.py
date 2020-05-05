@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views.generic import RedirectView
 
+admin.site.site_header = "csv2api"
+
 urlpatterns = [
     path('core/', include('csv2api.core.urls')),
     path('api/', include('csv2api.apis.urls'), name='api_home'),
     path('admin/', admin.site.urls),
 
     # path('', RedirectView.as_view(pattern_name='api_home')),
-    path('', RedirectView.as_view(url='/api/')),
+    path('', RedirectView.as_view(url='/api/docs/')),
 ]
